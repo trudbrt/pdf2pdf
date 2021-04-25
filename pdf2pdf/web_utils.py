@@ -32,8 +32,8 @@ class ForstingerProduktSoup(GenericSoup):
     def find_arttext1(self, reqtype, *args, **kwargs):
         if self.soup:
             arttext1 = self.soup.find('h5', class_='product_card-headline')
-        if arttext1:
-            return arttext1.text.strip()
+            if arttext1:
+                return arttext1.text.strip()
         return reqtype
 
     def find_artnr(self, *args, **kwargs):
@@ -42,10 +42,10 @@ class ForstingerProduktSoup(GenericSoup):
     def find_statt(self, reqtype, *args, **kwargs):
         if self.soup:
             statt = self.soup.find('div', class_='product_card-price')
-        if statt:
-            statt = [float(i)/100 for i in statt.text.split('statt')]
-            if len(statt) > 1:
-                return statt[-1]
+            if statt:
+                statt = [float(i)/100 for i in statt.text.split('statt')]
+                if len(statt) > 1:
+                    return statt[-1]
         return reqtype
 
     def find_preis(self, reqtype, *args, **kwargs):
