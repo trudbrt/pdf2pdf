@@ -22,7 +22,7 @@ class ColabInterface(object):
         with open(Paths.DB_CONF_PATH, mode='r') as f:
             for line in f.readlines():
                 if re.match(r'FILNR=fil_[0-9]{3}$', line.strip()):
-                _, self._filnr = line.strip().split('=')
+                    _, self._filnr = line.strip().split('=')
         Db.db_uri = f'file:{urllib_pathname2url(Paths.DB_PATH)}?mode=rw'
         if db_search:
             self._db_search = setup_local_table(filnr=self._filnr)
