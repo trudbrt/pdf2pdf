@@ -85,7 +85,7 @@ class GenericData(SanityTests):
                 df_dict[key][i] = user_input.get(key, df_dict[key][i])
         return cls(df_dict, parent=parent)
 
-    @clasmethod
+    @classmethod
     def from_input(cls, *args, user_input=None, parent=None, 
             df_dict=None, **kwargs):
         user_input = user_input or dict()
