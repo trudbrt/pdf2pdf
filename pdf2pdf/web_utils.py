@@ -31,7 +31,7 @@ class ForstingerProduktSoup(GenericSoup):
 
     def find_arttext1(self, reqtype, *args, **kwargs):
         if self.soup:
-        arttext1 = self.soup.find('h5', class_='product_card-headline')
+            arttext1 = self.soup.find('h5', class_='product_card-headline')
         if arttext1:
             return arttext1.text.strip()
         return reqtype
