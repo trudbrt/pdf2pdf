@@ -11,7 +11,7 @@ setup(
         name='pdf2pdf',
         version='1.0.0',
         description='takes a pdf gives a pdf',
-        licence=open('LICENCE').read(),
+        licence=open('LICENSE').read(),
         author='Yours truly',
         author_email='thmartaf@protonmail.com',
         url='https://github.com/trudbrt/pdf2pdf',
