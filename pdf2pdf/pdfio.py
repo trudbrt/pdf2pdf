@@ -49,7 +49,7 @@ class Regaletiketten3X8YverDataFromPdf(GenericDataFromPdf):
         for index, e in enumerate(tag):
             for line in e:
                 if int(line.height) in self._arttext_font_size:
-                return tag.pop(index).get_text().strip('\n')
+                    return tag.pop(index).get_text().strip('\n')
         return ''
 
     def extract_arttext1(self, tag, *args, **kwargs):
